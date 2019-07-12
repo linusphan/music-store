@@ -2,8 +2,8 @@
 
 This is a single-page application built from scratch using Backbone, Express,
 Pug (formerly known as Jade), Stylus and Handlebars with testing using the
-Jasmine testing framework. This is a bigger project that will accumulate a large
-variety of Frontend technologies and knowledge.
+Jasmine testing framework. This project accumulates a large variety of Frontend
+technologies and knowledge.
 
 # Notes on the application setup
 

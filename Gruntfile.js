@@ -28,12 +28,24 @@ module.exports = function (grunt) {
         },
       },
     },
+    handlebars: {
+      all: {
+        files: {
+          'public/javascripts/handlebars_templates.js': ['handlebars/**/*.hbs'],
+        },
+        options: {
+          processContent: removeWhitespace,
+          processName: extractFileName,
+        },
+      },
+    },
   });
 
   // initialize above plugins
   [
     'grunt-bower-concat',
     'grunt-contrib-uglify',
+    'grunt-contrib-handlebars'
   ].forEach(function (task) {
     // load each task
     grunt.loadNpmTasks(task);
@@ -43,3 +55,11 @@ module.exports = function (grunt) {
   // first concatenates then uglifies
   grunt.registerTask('default', ['bower_concat', 'uglify']);
 };
+
+function removeWhitespace(template) {
+  return template.replace(/ {2,}/mg, '').replace(/\r|\n/mg, '');
+}
+
+function extractFileName(file) {
+  return file.match(/\/(.+)\.hbs$/).pop();
+}

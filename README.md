@@ -23,3 +23,4 @@ technologies and knowledge.
     to templates then it'll automatically recompile the JS file
   * set up grunt file to concat and minify our JS and run it with `grunt` CLI
     command
+  * install `Stylus` with `npm install`

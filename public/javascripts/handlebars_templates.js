@@ -17,7 +17,7 @@ this["JST"]["album"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":fun
 },"useData":true});
 
 this["JST"]["index"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<h1>Albums</h1><ul></ul><footer><a class=\"button\" href=\"#\">Add album</a></footer>";
+    return "<h1>Albums</h1><ul></ul><footer><a class=\"button\" href=\"/albums/new\">Add album</a></footer>";
 },"useData":true});
 
 this["JST"]["new_album"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {

@@ -3,8 +3,9 @@ var App = {
   $el: $('main'),
 
   indexView: function () {
-    this.indexView = new IndexView();
+    this.index = new IndexView();
     this.renderAlbums();
+    this.bindEvents();
   },
 
   renderAlbums: function () {
@@ -23,12 +24,7 @@ var App = {
 
   bindEvents: function () {
     _.extend(this, Backbone.Events);
-    this.listenTo(this.indexView, 'addAlbum', this.newAlbum);
-  },
-
-  init: function () {
-    this.indexView();
-    this.bindEvents();
+    this.listenTo(this.index, 'addAlbum', this.newAlbum);
   },
 };
 

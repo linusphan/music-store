@@ -16,3 +16,7 @@ var App = {
     this.renderAlbums();
   },
 };
+
+Handlebars.registerHelper('formatPrice', function (price) {
+  return (+price).toFixed(2);
+});

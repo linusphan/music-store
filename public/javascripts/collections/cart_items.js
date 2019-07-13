@@ -3,6 +3,8 @@ var CartItems = Backbone.Collection.extend({
     this.total = this.toJSON().reduce(function (a, b) {
       return a + b.price * b.quantity;
     }, 0);
+
+    return this;
   },
 
   getTotal: function () { return this.total; },
@@ -13,15 +15,31 @@ var CartItems = Backbone.Collection.extend({
     this.quantity = this.toJSON().reduce(function (a, b) {
       return a + b.quantity;
     }, 0);
+
+    return this;
   },
 
   addItem: function (item) {
-    item = item.clone();
-    item.set('quantity', 1);
-    
-    this.add(item);
-    this.setTotal();
-    this.setQuantity();
+    var existing = this.get(item.get('id'));
+
+    if (existing) {
+      existing.set('quantity', existing.get('quantity') + 1);
+    } else {
+      existing = item.clone();
+      existing.set('quantity', 1);
+      this.add(existing);
+    }
+
+    this.setTotal().setQuantity();
     this.trigger('cartUpdate');
+  },
+
+  destroy: function (id) {
+    this.remove(id);
+    this.setTotal().setQuantity();
+  },
+
+  initialize: function () {
+    this.on('destroy', this.destroy);
   },
 });

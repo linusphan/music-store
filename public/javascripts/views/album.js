@@ -1,5 +1,15 @@
 var AlbumView = Backbone.View.extend({
   tagName: 'li',
+
+  events: {
+    'click a.button': 'addToCart',
+  },
+
+  addToCart: function (e) {
+    e.preventDefault();
+    App.trigger('addToCart', this.model);
+  },
+
   template: App.templates.album,
 
   render: function () {

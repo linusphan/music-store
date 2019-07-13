@@ -1,3 +1,5 @@
+<img width="572" alt="music_store" src="https://user-images.githubusercontent.com/13613724/61176831-8c4e9a00-a57c-11e9-8614-66a7dfc95345.png">
+
 # About
 
 This is a single-page application built from scratch using Backbone, Express,

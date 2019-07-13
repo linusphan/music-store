@@ -1,11 +1,10 @@
 # About
 
 This is a single-page application built from scratch using Backbone, Express,
-Pug (formerly known as Jade), Stylus and Handlebars with testing using the
-Jasmine testing framework. This project accumulates a large variety of Frontend
-technologies and knowledge.
+Pug (formerly known as Jade), Stylus and Handlebars. This project accumulates a
+large variety of Frontend technologies and knowledge.
 
-# Notes on the application setup
+# Some notes regarding this application's setup
 
 * created application skeleton with express
 * npm install `nodemon` as dev dependency and change `npm start` to use

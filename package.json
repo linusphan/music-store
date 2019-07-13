@@ -13,7 +13,8 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nib": "^1.1.2",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "underscore": "^1.9.1"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

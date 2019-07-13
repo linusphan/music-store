@@ -1,4 +1,7 @@
 <img width="572" alt="music_store" src="https://user-images.githubusercontent.com/13613724/61176831-8c4e9a00-a57c-11e9-8614-66a7dfc95345.png">
+
+---
+
 <img width="580" alt="music_store_form" src="https://user-images.githubusercontent.com/13613724/61176847-ce77db80-a57c-11e9-9805-1006a27c7cb5.png">
 
 # About
